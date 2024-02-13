@@ -1,1 +1,19 @@
-(Add your list of flows here)
+# General Test Scenarios:
+- Enter a GitHub username, submit the form, then quickly modify the username and submit again to check if the application can handle rapid consecutive requests.
+- Use browser automation to simulate multiple users submitting different usernames at the same time to test the application's concurrency handling.
+- Check the application's behavior when a valid username is entered that belongs to an account with a very large number of repositories to test performance.
+- Verify the application's responsiveness by changing the viewport size to simulate different devices (mobile, tablet, desktop).
+- Enter a valid GitHub username and verify if the application fetches the repositories correctly.
+- Check if the input field allows entering alphanumeric characters typically found in GitHub usernames.
+- Verify the form's behavior when the input field is left empty and the 'Go' button is clicked.
+- Verify that pressing the 'Enter' key while in the username input field submits the form.
+- Confirm that clicking the 'Go' button submits the form.
+- Ensure that the label 'Github Username' is correctly associated with the input field, aiding accessibility.
+- Test that the message 'No repos' is displayed by default before any search is performed.
+- Validate that the application handles the transition from 'No repos' to displaying the actual repositories when a valid username with repositories is entered.
+- Attempt to submit the form with an excessively long username to check if there's a character limit.
+- Enter a GitHub username that does not exist to see if an appropriate error message is displayed.
+- Input special characters or spaces that are not allowed in GitHub usernames to test input validation.
+- Try to inject HTML or JavaScript code into the input field to check for potential security vulnerabilities like XSS (CrossSite Scripting).
+- Disable JavaScript in the browser and attempt to submit the form to see if the application has server side validation.
+- Test the form submission with a slow or unstable internet connection to see how the application handles network issues.
