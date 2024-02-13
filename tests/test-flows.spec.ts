@@ -14,6 +14,3 @@ for(const username of usernames){
     await searchPage.clickOnGoBtn();
   });
 }
-
-const 
-test(``)
