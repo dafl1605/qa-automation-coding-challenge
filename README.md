@@ -46,4 +46,14 @@ Help Adam gain confidence in further development by automatically testing the mo
 - Feel free to modify or add whatever you need including addition of other packages, your own libraries, etc
 - Please submit a link to your finished repository when you are ready
 
+### How to run the tests
+Install playwright from package.json using the **NPM command.** There's diferent ways to run the tests.
+- run by spec file: `npx playwright test file.spec.ts`
+- run by title: `npx playwright test -g "title of the test"`
+
+the parameter `--headed` needs to be add at the end of the command. In this way the tests going to run from the browser. By default the tests run in headless mode.
+
+If you need to add another browser, we can make these changes on playwright.config.ts. Right now the default and only browser it is chrome 
+
+
 ## Good luck and happy coding! :)
