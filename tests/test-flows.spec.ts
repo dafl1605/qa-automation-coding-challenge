@@ -4,7 +4,7 @@ import { generateUsername } from 'unique-username-generator';
 import { SearchPage } from './pages/SearchPage'
 
 
-const usernames = [generateUsername('-'), generateUsername('',3),generateUsername("", 3, 19)]
+const usernames = [generateUsername('-'), generateUsername('',3),generateUsername('',2)]
 for(const username of usernames){
   test(`Search multiple invalid usernames: Username ${username}`, async ({ page }) => {
     await page.goto(BASE_URL);
