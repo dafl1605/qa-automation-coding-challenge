@@ -38,7 +38,7 @@ test(`Verify the link on the result is the right repo`, async ({ page,context })
   let resultLinks = await page.getByRole('link');
   let expectedRepo = resultLinks[0].textContent();
   await page.click(resultLinks[0]);
-  const newPage = await context.WaitForEvent('page');
+  const newPage = await context.waitForEvent('page');
   await newPage.waitForLoadState();
   await expect(newPage.url()).toContain(expectedRepo);
 });
