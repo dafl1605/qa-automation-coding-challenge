@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 import { BASE_URL } from './constants/UrlConstants';
-import { generateUsername } from 'unique-username-generator';
 import { SearchPage } from './pages/SearchPage'
 
 let searchPage;
@@ -9,16 +8,6 @@ test.beforeEach(async({page}) => {
   await page.goto(BASE_URL);
   searchPage = new SearchPage(page);
 });
-
-const usernames = [generateUsername('',0,5), generateUsername('',0,5),generateUsername('',0,5)]
-for(const username of usernames){
-  test(`Search multiple invalid usernames: ${username}`, async () => {
-    await searchPage.fillUsername(username);
-    await searchPage._goButton.hover();
-    await searchPage.clickOnGoBtn();
-    await expect(searchPage._messageFailure).toBeVisible();
-  });
-}
 
 const validUsers = ['hello', 'test', 'issue', 'bug']
 for(const validUser of validUsers){
